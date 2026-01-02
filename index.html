@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Tycoon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- Canvas will be appended by Three.js or we can target one -->
+        <div id="ui-layer">
+            <div id="hud">
+                <div class="resource-counter">
+                    <span class="icon">🥩</span>
+                    <span id="meat-count">0</span>
+                </div>
+                <div class="resource-counter">
+                    <span class="icon">🪙</span>
+                    <span id="coin-count">0</span>
+                </div>
+            </div>
+
+            <div id="upgrade-panel">
+                <h2>Upgrades</h2>
+                <div class="upgrade-item" id="upgrade-spikes">
+                    <div class="info">
+                        <h3>Spike Power</h3>
+                        <p>Increase damage & speed</p>
+                    </div>
+                    <button class="buy-btn" data-cost="10">10 🪙</button>
+                </div>
+                <div class="upgrade-item" id="upgrade-spawn">
+                    <div class="info">
+                        <h3>More Chickens</h3>
+                        <p>Increase spawn rate</p>
+                    </div>
+                    <button class="buy-btn" data-cost="25">25 🪙</button>
+                </div>
+                <div class="upgrade-item" id="upgrade-area">
+                    <div class="info">
+                        <h3>Expand Area</h3>
+                        <p>Unlock new zones</p>
+                    </div>
+                    <button class="buy-btn" data-cost="1000">1000 🪙</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="src/main.js"></script>
+</body>
+
+</html>
